@@ -1,0 +1,34 @@
+@use 'base/variables' as b;
+@use 'base/mixings' as m;
+
+
+
+.sobre-festival{
+
+
+//tuve un error aqui no e si es que no puse el media de la tablet lo pongo para verificarlo despues
+@include m.Tablet {
+@include m.grid(2,5rem);
+
+ }
+
+}
+
+.contendio-festival{
+display:flex;
+flex-direction: column;//de cambiamos a columnas 
+align-items: center;
+h2{
+  margin-bottom: 2rem;
+}
+@include m.Tablet{
+margin:0;
+}
+.fecha{
+  color:b.$rosa;
+  font-weight: 700;//grosor de la letra
+}
+
+
+
+}

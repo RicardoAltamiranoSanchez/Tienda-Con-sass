@@ -1,0 +1,7 @@
+//aqui importamos en la nueva forma ya que en la vieja era con import y era global
+//a referencia de esto no es global debes importar si quieres usar las informacion de la carpeta
+//de ponemos en nombre de la carpeta para no importe todo lo que hay en ella
+@forward 'variables';
+@forward 'normalize';
+@forward 'globales';
+@forward 'mixings';

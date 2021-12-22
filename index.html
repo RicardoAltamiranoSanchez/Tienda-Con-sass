@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock & EDM Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../FestivalMusica_inicio/build/css/app.css">
+</head>
+<body>
+    <!--la parte de encabezado-->
+    <header class="Header">
+        <div class="contenedor contenido__header">
+            <h1>Rock & EDM Festival</h1>
+            <nav class="navegacion">
+                <a href="#">Line Up</a>
+                <a href="#">Galeria</a>
+                <a href="#">Boletos</a>
+            </nav>
+        </div>
+    </header>
+    <!--Hacemos el viddeo con la etiqueta dentro y un degradalo -->
+    <div class="video">
+        <div class="overlay">
+            <div class="contenido contenido-video">
+                <h2>Rock & EDM Festival</h2>
+                <p>Febrero 2022, Ciudad de Mexico.</p>
+            </div>
+        </div>
+        <!--Para video debemos poner una etiqueta de video debemos poner primero el de mp4 por es que mas es soportado-->
+        <!--autoplay es para que se reproduzca muted es para dejarlo sin sonido y loop es para que se repita y controls es para poner controles-->
+        <video autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
+    <!--fin del video-->
+    <!--Hacemos una session del festival -->
+    <section class="contenedor sobre-festival">
+        <div class="imagen-festival">
+            <!--Esto es para poner varios tipos de imagenes por si no soporta una se va al aque igue-->
+            <picture>
+                <source srcset="build/imagenes/imagen_vocalista.avif" type="image/avif">
+                <source srcset="build/imagenes/imagen_vocalista.webp" type="image/webp">
+                <!--Se recomienda usar el loading y el witdh y el heigth para que se acomode aautomatica mente-->
+                <img loading="lazy" witdh="200" heigth="300" src="img/imagen_vocalista.jpg" />
+            </picture>
+        </div>
+        <div class="contenido-festival">
+            <h2>Rock & EDM Festival</h2>
+            <p class="fecha">Febrero 2022, Ciudad de Mexico.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti libero corporis,
+                similique minima esse voluptatibus,
+                omnis alias, aut assumenda rem facere!
+                Minus corporis maxime distinctio obcaecati. Porro fugiat quia quas.</p>
+        </div>
+    </section>
+    <!--seccion de line up -->
+    <section class="lineup">
+        <h3>Line up</h3>
+        <p class="dia">viernes</p>
+        <div class="contenedor-escenario  contenedor">
+            <div class="escenario rock big-amarillo">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Metallica</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Pearl Jam</span>
+                    </li>
+                    <li>
+                        20:00 | <span>KoRn</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Muse</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Breaking Benjamin</span>
+                    </li>
+                    <li>
+                        17:00 | <span>30 Seconds to Mars</span>
+                    </li>
+                </ul>
+            </div>
+            <!--fin de contenedor de escenario rock-->
+            <div class="escenario electro big-verde">
+
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Deadmau5</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Tïesto</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Hardwell</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Dash Berlin</span>
+                    </li>
+
+                    <li>
+                        18:00 | <span>Fedde Legrand</span>
+                    </li>
+                    <li>
+                        17:00 | <span>Audien</span>
+                    </li>
+                </ul>
+            </div>
+            <!--fin de contenedor de escenario rock-->
+        </div>
+        <!--fin del contenendor del escenarios-->
+        <p class="dia">Sabado</p>
+        <div class="contenedor-escenario  contenedor">
+            <div class="escenario rock big-verde">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Red Hot Chili Peppers</span>
+                    </li>
+                    <li>
+                        22:00 | <span>The Killers</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Deftones</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Limp Bizkit</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Papa Roach</span>
+                    </li>
+                    <li>
+                        17:00 | <span>Lamb of God</span>
+                    </li>
+                </ul>
+            </div>
+            <!--fin de contenedor de escenario rock-->
+            <div class="escenario electro big-amarillo">
+                <p class="nombre-escenario"> Escenario EDM</p>
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Paul Van Dyk</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Armin Van Buuren</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Above & Beyond</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Eric Prdyz</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Ferry Corsten</span>
+                    </li>
+                    <li>
+                        17:00 | <span>Vini Vici</span>
+                    </li>
+                </ul>
+            </div>
+            <!--fin de contenedor de escenario rock-->
+        </div>
+        <!--fin del contenendor del escenarios-->
+    </section>
+
+<!--Seccion de galeria-->
+
+
+<section class="galeria contenedor">
+
+        <h3>Galería</h3>
+
+        <ul class="galeria-imagenes"></ul>
+
+    </section>
+
+<script src='build/js/app.js'></script>
+</body>
+</html>

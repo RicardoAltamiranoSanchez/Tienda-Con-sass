@@ -1,0 +1,91 @@
+@use "base/variables" as b;
+@use "base/mixings" as m;
+.lineup {
+  background-color: b.$rosa;
+  padding: 5rem 0;
+
+  h3,
+  p {
+    text-align: center;
+    color: b.$blanco;
+  }
+  .dia {
+    text-transform: uppercase;
+ margin:5rem 0 ;//separamos desde arriba
+  }
+
+}
+
+.contenedor-escenario {
+
+@include m.Tablet {
+     @include m.grid(2, 5rem);
+
+}
+
+p{
+  color:b.$negro;
+}
+.contenedor-escenario {
+padding-top:3rem;//de ponermos serparacion desde arriba el bottom es de abajo
+}
+
+}
+
+.escenario{
+padding-top:2rem;
+font-weight: 700;
+ p{//creamos un parrafo despues que se halla cargado el html
+
+  &:after{
+    content:"";
+    display:block;
+    width:20rem;
+    height:10rem;
+    background-size:15rem;
+background-repeat:no-repeat;
+background-position:center center;
+margin:2rem auto 0 auto;
+
+  }
+
+}
+
+}
+.electro .nombre-escenario:after{//el after lo ponemos por que ya lo  hemos creado 
+background-image:url('../../../build/imagenes/icono_edm.webp');
+
+}
+.rock .nombre-escenario:after{//el after lo ponemos por que ya lo  hemos creado 
+background-image:url('../../../build/imagenes/icono_rock.webp');
+
+}
+
+.big-amarillo{
+background-color:b.$amarillo;
+li:nth-child(odd) {//hacemos que todos lo numeros impar nos los seleccione
+background-color:darken(b.$amarillo,15%);//darken es para poner un color mas oscuro tiene dos parametro el color y cuanto vamos a oscurecer
+}
+
+}
+.big-verde{
+background-color: b.$verde;
+li:nth-child(odd) {//hacemos que todos lo numeros impar nos los seleccione
+background-color:darken(b.$verde,10%);//darken es para poner un color mas oscuro tiene dos parametro el color y cuanto vamos a oscurecer
+}
+
+}
+
+.calendario{
+
+@include m.resetear-lista;
+
+li{
+   padding:2.5rem;
+    font-weight: 700;//hacemos la letra mas oscura
+}
+p{
+  font-weight: 400; 
+   }
+
+}

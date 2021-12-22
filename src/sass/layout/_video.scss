@@ -1,0 +1,52 @@
+@use 'base/variables' as b;
+@use 'base/mixings' as m;
+//para poder meter el parrafo adentro del video debemos poner position relative en la clase video
+//y poner absolute en la clae de overlay
+.video{
+    position :relative;
+    max-height: 70rem;//acomodamos el video
+    min-height:50rem;
+   overflow:hidden;//hacemos que se vea el video dentro del gradiente no se vea afuera
+  .overlay{
+    position:absolute;
+  background: rgb(255,175,213);
+background: linear-gradient(90deg, rgba(255,175,213,0.3) 83%, rgba(15,191,197,0.3) 87%, rgba(0,212,255,1) 100%);
+    height:100%;
+    width:100%;
+  display:flex;
+   flex-direction:column;//de ponemos en direccion de columna
+  justify-content: center;// lo Centramos
+//pagina para hacer lo desgradalos https://cssgradient.io/
+   }
+.contenido-video{
+
+
+h2{
+  font-size:4rem;
+   
+   margin:0;
+color:b.$blanco;
+
+}
+p{
+display:inline-block;//es para que solo pinte el color de fondo hasta donde este las letras y no todo el parrafo
+color:b.$blanco;
+background-color:b.$rosa;
+padding:1rem 2rem;
+font-weight: 700;//la altura de la letra
+font-size:2.4rem;
+margin:0;
+}
+}  
+
+
+  video{
+    width:100%;
+    display:block;//lo ponemos para quitar la linea de abajo igual se pone en las imagenes
+  }
+
+
+
+}
+
+

@@ -1,0 +1,60 @@
+@use 'variables' as b;
+
+//codigo para utilizar rem
+html{
+    font-size:62.5%;
+    box-sizing:border-box;
+}
+*,
+*:before,
+*:after{
+  box-sizing:inherit;
+}
+
+body{
+  font-family:b.$fuente_principal;
+  font-size:1.6rem;
+}
+
+p{
+  font-size:1.6rem;
+  color:b.$negro;
+ line-height: 1.5;
+}
+.contenedor{
+ width:90%;
+max-width:120rem;
+margin:0 auto;
+}
+a{
+text-decoration:none;
+}
+h1,h2,h3{
+
+ margin:0 0 5rem 0;
+}
+h1{
+font-size:4rem;
+}
+h2{
+font-size:3.5rem;
+}
+h3{
+font-size:3rem;
+
+
+}
+
+//ajustamos la imagenes
+img{
+//lo quite por que no me mostraba bien las imagenes verificar despues por si hay un error en las imagenes
+    max-width:100%;//important para acomodar las imagenes ante de la galeria
+    height:100%;//se recomienda por el lazy y el loading
+  width:auto;//se srecomienda por el lazy el loading en el htnl
+    display:block;
+
+}
+
+
+
+

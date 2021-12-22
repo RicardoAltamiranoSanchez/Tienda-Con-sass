@@ -1,0 +1,16 @@
+//la variable en sass se pone con un signo $
+//para poder compilar el archivo sass debemos poner un script en la carpte package.json
+//poner sass: "sass src/scss"
+//para que nos pueda copilar el codigo sass 
+//despues de indicamos en donde va guardar el codigo css y en que carpeta para eso ponermos esta sintaxis
+//despues de sccss  seria asi "sass src/scss:build/css" despues de los dos puntos indicamos donde va guardar el codigo
+//para habilitar cuando este escuchando por los cambios debemos habilitar --watch
+//seria al final asi sass: "sass --watch src/scss:build/css"
+//para trabajar con gulp lo instalamos globalmente  npm i -g gulp y lo instalmos en como en desarrollo npm i --save-dev gulp
+//debemos crear un archivo de gulpfile.js para poder hacer que funcione
+//importamos de la viejea manera los archivos con sas es con @import 'dirrecion del archivo' se importan de forma global
+//es decir cuando importamos hacia la app principal todas las hojas la pueden usar
+// @import 'base/base';
+// @import 'contenido/contenido'; importacion de la vieja forma
+@use 'base';//lo importamos de la nueva formar solo ponemos el nombre de la carpeta
+@use 'layout';

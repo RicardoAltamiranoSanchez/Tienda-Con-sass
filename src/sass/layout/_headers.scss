@@ -1,0 +1,54 @@
+@use 'base/variables' as b;
+@use 'base/mixings' as m;
+
+.Header {
+ background-color:b.$verde;
+
+//escojemos lo que esta dentro de la etiqueta o clase de header 
+ h1 {
+    color:b.$blanco;
+   text-align: center;
+ @include m.Tablet {
+   margin:0;  
+ }
+  }
+.contenido__header{
+   padding:2rem;
+@include m.Tablet{
+  display:flex;
+ justify-content:space-between;//centramos los arrow
+  align-items: center;  
+}
+}
+}
+.navegacion{
+
+//ejemplo de mixin con media query
+// @include m.Telefono{
+@include m.Tablet {
+display:flex;
+gap:2rem;  
+}
+//}
+   a{
+    display:block;
+    font-size:2.4rem;
+   margin-bottom:1rem;
+   
+    color:b.$blanco;
+     text-align: center;  
+  @include m.Tablet {        
+    margin:0;
+  }
+ //ponemos el simbolo de y romana para nos quite el espacio ya que si no lo ponemos nos marca un error
+  &:hover{
+    color:b.$amarillo;
+   } 
+}
+}
+//Ejemplo de mixing solo debemos llamar al mixing com si fuera una variable en sass con @include y el nombre
+// .header{
+
+// @include m.heading(v.$amarillo,true);
+
+// }

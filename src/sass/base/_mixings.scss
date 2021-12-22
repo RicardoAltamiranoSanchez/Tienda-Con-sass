@@ -1,0 +1,60 @@
+//los mixins son archivos con codigo para utilizar varias veces en diferentes area
+//es como si fueran funciones en programacion es para reutilizarcodigo lo llamamos con @mixin
+//Es un ejemplo de mixin se puede poner parametros como una funcion y hacer condicionales dentro de el
+//basicamente seria una funcion
+
+// @mixin heading($color:blue,$border-radius:false){
+// text-transform:uppercase;
+// font-size:2.4rem;
+// color:$color;
+// letter-spacing: 10px;//no sirve para la separacion entre letras
+// background-color:black;
+
+// @if $border-radius{
+//    border-radius:3rem;
+// }
+   
+// }
+//hacemos mixings con los media query
+@use "base/variables" as b;
+
+@mixin Telefono{
+//El content es para indicar que va llevar contenido asi lo  podemos llamar
+//y meter contenido al mixing en otra parte del software
+@media (min-width:b.$Telefono)
+{@content;}
+}
+
+
+@mixin Tablet{
+//El content es para indicar que va llevar contenido asi lo  podemos llamar
+//y meter contenido al mixing en otra parte del software
+@media (min-width:b.$Tablet)
+{@content;}}
+
+
+@mixin Computadora{
+//El content es para indicar que va llevar contenido asi lo  podemos llamar
+//y meter contenido al mixing en otra parte del software
+@media (min-width:b.$Computadora)
+{@content;}}
+
+@mixin ComputadoraXL{
+//El content es para indicar que va llevar contenido asi lo  podemos llamar
+//y meter contenido al mixing en otra parte del software
+@media (min-width:b.$ComputadoraXL)
+{@content;
+}}
+//para crear snnipet con con crtl > + p y buscar la opcion user snniperts
+
+@mixin grid($columnas,$espaciado){
+display:grid;
+grid-template-columns:repeat($columnas,1fr);
+gap:$espaciado;
+}
+
+@mixin resetear-lista{
+   margin:0;
+   padding:0;
+   list-style:none;
+}

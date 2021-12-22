@@ -1,0 +1,26 @@
+@use 'base/variables' as b;
+@use 'base/mixings' as m;
+.galeria{
+  padding:5rem 0;
+   h3{
+     text-align:center;
+   }
+ 
+}
+.galeria-imagenes{
+
+ @include m.resetear-lista;
+  @include m.grid(2,2rem);
+  @include m.Telefono{
+        @include m.grid(3,2rem);
+   }
+   @include m.Tablet{
+         @include m.grid(4,2rem);
+   }
+
+  @include m.Computadora{
+        @include m.grid(6,2rem);
+  } 
+}
+
+
