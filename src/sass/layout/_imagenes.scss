@@ -24,3 +24,40 @@
 }
 
 
+.overlay {
+    position: fixed;//fixed es fijo es para ponerlo fijo la imagen 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   //todos estos parametros desde el position es para posicionar la imagen de forma fija que no se mueva
+    width: 100%;
+    height: 100%;
+//la usamos el grid para centrar la imagen
+    display: grid;
+    place-items: center;//place-items centra la imagen como vertical y horizontalmente
+
+    background-color: rgba(32, 29, 29, 0.5);//oscurecemos el fonde para que la imagen se vea mejor
+
+    picture {
+//ponemos el block para que la imagen pueda ser afectada y poner un tamaño mas pequeño
+        display: block;
+        max-width: 80rem;
+    }
+}
+
+
+.btn-cerrar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;//lo hacemos redondo
+    background-color: b.$blanco;
+    color: b.$negro;
+    display: grid;//utilizamos grid para centrar la x
+    place-items: center;//centramos la x horizontal y vertical mente
+    font-weight: 700;// de cambiamos el tamaño ala x
+
+    &:hover {
+        cursor: pointer;//cuando la flecha toque la x cambie a manita
+    }
+}
