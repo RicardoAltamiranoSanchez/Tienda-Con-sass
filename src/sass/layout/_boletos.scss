@@ -1,10 +1,7 @@
 @use 'base/variables' as b;
 @use 'base/mixings' as m;
 .boletos {
-
     padding: 5rem 0;
-   
-
     h3 {
         text-align: center;
         color: b.$blanco;
@@ -12,9 +9,9 @@
     }
     .contenedor-boletos {
         @include m.Tablet {
-            @include m.grid(2, 5rem);
-        }
-  
+        @include m.grid(2, 5rem);                  
+
+      }
     }
 }
 .pase {
@@ -28,7 +25,7 @@
     &-header,
     &-footer  {
         padding: .5rem;
-        p {
+           p {
             text-align: center;
             color: b.$blanco;
             margin: 0;
@@ -41,6 +38,7 @@
             font-size: 1.6rem;
         }
     }
+
     &-body {
         background-color: b.$blanco;
         ul {
@@ -61,3 +59,4 @@
         }
     }
 }
+

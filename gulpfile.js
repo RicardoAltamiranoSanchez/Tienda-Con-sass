@@ -14,6 +14,16 @@ const imagemin =require('gulp-imagemin');
 const cache=require('gulp-cache');
 //paa las imagenes version avif
 const avif=require('gulp-avif');
+//configuracion para el prefomance en css del codigo css
+const autoprefixer=require('autoprefixer');
+const cssnano=require('cssnano');
+const postcss= require('gulp-postcss');
+
+//para poder buscar ene el archivo css el navegador lo puede entener y te  indica en que hoja esta
+const sourcemaps=require('gulp-sourcemaps')
+
+//para comprimir el codigo js
+const terser=require('gulp-terser-js');
 
 function imagenes(done){
 const opciones={
@@ -57,8 +67,12 @@ function css(done){
 //Indentificar archivos .scss a compilar src('src/sass/app.scss') solo indentifica el archivo app para que nos lea toda la sintaxis de todos los archivos
 //debemos poner los astericos src('src/sass/**/*.scss')
 src('src/sass/**/*.scss').
+pipe(sourcemaps.init()).//Iniciamos el sourcempas
 pipe(plumber()).
+
 pipe(sass()).//pipe para indicar el sisgueiente cuando termine pasar al siguiente
+pipe(postcss([autoprefixer(),cssnano()])).//es para el performar de cs y que el codigo este mas rapido y se complima el codigo
+pipe(sourcemaps.write('.')).//Escribimos una hoja donde indicque donde esta los componentes
 pipe(dest('build/css'));//Almacenar de decimos que nos lo guarde en esa carpeta
 //Copilar
 
@@ -66,8 +80,11 @@ done();
 
 }
 function javascript(done){
-src('src/js/**/*.js')//buscamos los archivos con extnsion de javascript
-.pipe(dest('build/js'));//lo almacenamos en la carpeta
+src('src/js/**/*.js').//buscamos los archivos con extnsion de javascript
+pipe(sourcemaps.init()).//Iniciamos el sourcempas
+pipe(terser()).//para comprimir el codigo de js
+pipe(sourcemaps.write('.')).//Escribimos una hoja donde indicque donde esta los componentes
+pipe(dest('build/js'));//lo almacenamos en la carpeta
 done();
 
 }
@@ -85,3 +102,10 @@ exports.convertirAvif=convertirAvif;
 exports.dev=parallel(convertirAvif,imagenes,convertirwebp,javascript,dev);
 //para poder compilar sass debemos instalar una dependencia de gulp
 //seria esta npm install --save-dev gulp-sass
+//instalamos dependencias para la mejora del codigo en css
+//npm install -save-dev cssnano autoprefixer postcss gulp-postcss
+
+//npm install --save-dev gulp-sourcemaps es para poder buscar un componente en el archivo sass o css ya que lo compromimos
+
+//instalador para mejorar el codigo de js
+//npm install gulp-terser-js

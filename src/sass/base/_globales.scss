@@ -15,9 +15,21 @@ body{
   font-family:b.$fuente_principal;
   font-size:1.6rem;
 
+
+
     &.fijar-scroll {
         overflow: hidden;//hacemos que no se mueva el scroll que e quede quieta
     }
+
+
+
+    &.body-scroll{
+     padding-top: 8.6rem;;
+ 
+   }
+
+
+
 }
 
 p{
