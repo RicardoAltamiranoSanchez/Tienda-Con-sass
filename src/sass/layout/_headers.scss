@@ -14,7 +14,17 @@
      width:100%;
    box-shadow: .1rem .2rem .3rem #333;
 }
-
+}
+@media(min-width:280px){
+  
+    &.fija{
+      left:0;
+      top:0;
+      position:fixed;
+      width:100%;
+      box-shadow: .1rem .2rem .3rem #333;
+    }
+  
 
 }
 
@@ -27,11 +37,13 @@
  }
   }
 .contenido__header{
-   padding:2rem;
+   padding:4rem;
 @include m.Tablet{
   display:flex;
  justify-content:space-between;//centramos los arrow
   align-items: center;  
+ 
+
 }
 }
 }
@@ -49,10 +61,11 @@ gap:2rem;
     font-size:2.4rem;
    margin-bottom:1rem;
    
+   
     color:b.$blanco;
      text-align: center;  
   @include m.Tablet {        
-    margin:0;
+    margin:auto 1rem;
   }
  //ponemos el simbolo de y romana para nos quite el espacio ya que si no lo ponemos nos marca un error
   &:hover{

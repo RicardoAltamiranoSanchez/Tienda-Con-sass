@@ -7,9 +7,10 @@
         color: b.$blanco;
         margin-bottom: 2rem;
     }
-    .contenedor-boletos {
+    #contenedor-boletos {
         @include m.Tablet {
-        @include m.grid(2, 5rem);                  
+        @include m.grid(2, 5rem); 
+        margin:auto 2rem;                 
 
       }
     }
